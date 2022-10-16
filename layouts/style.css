@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+
+
+/* FLEX LAYOUT STYLING */
 body{
   font-size: 15px;
   background-color:  hsl(0, 0%, 95%);
@@ -101,5 +104,48 @@ a{
   border:2px solid hsl(0, 0%, 95%);
   background-color: transparent;
   color: hsl(0, 0%, 95%);
+  
+}
+/* FLEX LAYOUT STYLING END */
+
+
+/* GRID LAYOUT STYLING */
+
+.gridContainer{
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  min-height: 500px;
+  width: 800px;
+  margin: auto;
+  margin-top: 100px;
+
+}
+
+.gridItem1{
+  background-color: rgb(252, 68, 68);
+  grid-column: span 2 / 3;
+}
+.gridItem2{
+  background-color: rgb(5, 177, 5);
+  width: 220px;
+
+}
+.gridItem3{
+  background-color: rgb(0, 159, 151);
+  grid-row: span 2 /4;
+  width: 400px;
+
+}
+.gridItem4{
+  background-color: rgb(240, 94, 36);
+  grid-column: span 2 / 4;
+
+}
+.gridItem5{
+  background-color: rgb(143, 4, 155);
+  grid-column: span 2 / 4;
+
   
 }
