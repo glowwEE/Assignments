@@ -16,6 +16,7 @@ body{
   margin: auto;
   margin-top: 100px;
   width: 850px;
+  max-height: 900px;
   border-radius: 9px;
 } 
 
@@ -54,7 +55,7 @@ body{
   font-family: 'Lexend Deca';
   font-weight: 400;
   color:hsla(0, 0%, 100%, 0.75) ;
-  margin-bottom: 70px;
+  margin-bottom: 90px;
 }
 
 a{
@@ -106,46 +107,93 @@ a{
   color: hsl(0, 0%, 95%);
   
 }
+
+
+.link{
+  margin-left: 100px;
+  margin-top: 50px;
+}
+
+.link a{
+  background-color: #015179;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 40px;
+  font-family: helvetica, 'serif';
+  font-size:20px ;
+  border-radius: 25px; 
+}
+
+.link a:hover{
+  background-color: #e5f6ff;
+  color: #015179;
+  border: 2px solid #015179;
+  
+}
+
+@media only screen and (max-width: 600px){
+	.container {
+		flex-direction: column;
+		margin: 20px auto;
+		width: 375px;
+		max-width: 90%;
+	}
+	
+	.card1{
+		border-radius:  10px 10px 0 0;
+	}
+	.card3{
+		border-radius: 0 0 10px 10px;
+	}
+}
 /* FLEX LAYOUT STYLING END */
 
 
 /* GRID LAYOUT STYLING */
 
 .gridContainer{
-  display: grid;
-  grid-template-columns:1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 20px;
-  min-height: 500px;
-  width: 800px;
-  margin: auto;
-  margin-top: 100px;
+    display: grid;
+    grid-template-areas:
+        'a a b'
+        'c d d'
+        'c e e';
+    grid-gap: 10px;
+    padding: 40px 5% 0;
+    width: 80%;
+    max-width: 700px;
+    height: 500px;
+    grid-template-columns: 47.5% 17.5% 35%;
+    grid-template-rows: 47.5% 24% 28.5%;
+    margin: auto;
+    margin-top: 50px;
 
 }
 
 .gridItem1{
   background-color: rgb(252, 68, 68);
-  grid-column: span 2 / 3;
+  grid-area: a;
 }
 .gridItem2{
   background-color: rgb(5, 177, 5);
-  width: 220px;
+  grid-area: b;
 
 }
 .gridItem3{
   background-color: rgb(0, 159, 151);
-  grid-row: span 2 /4;
-  width: 400px;
+  grid-area: c;
+  
 
 }
 .gridItem4{
   background-color: rgb(240, 94, 36);
-  grid-column: span 2 / 4;
+  grid-area: d;
+  
 
 }
 .gridItem5{
   background-color: rgb(143, 4, 155);
-  grid-column: span 2 / 4;
+  grid-area: e;
+  
 
   
 }
